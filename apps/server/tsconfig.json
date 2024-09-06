@@ -1,5 +1,5 @@
 {
-  "extends": "tsconfig/node.json",
+  "extends": "@traveler/tsconfig/node.json",
   "compilerOptions": {
     "plugins": [{ "name": "node" }],
     "rootDir": ".",
