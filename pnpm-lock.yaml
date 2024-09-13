@@ -133,10 +133,16 @@ importers:
 
   packages/louvre:
     dependencies:
+      '@stitches/react':
+        specifier: ^1.2.8
+        version: 1.2.8(react@18.3.1)
       react:
         specifier: ^18.2.0
         version: 18.3.1
     devDependencies:
+      '@traveler/tokens':
+        specifier: workspace:*
+        version: link:../tokens
       '@traveler/tsconfig':
         specifier: workspace:*
         version: link:../tsconfig
@@ -146,6 +152,18 @@ importers:
       '@types/react-dom':
         specifier: ^18.2.19
         version: 18.3.0
+      eslint:
+        specifier: ^8.57.0
+        version: 8.57.0
+      tsup:
+        specifier: ^8.0.2
+        version: 8.2.4(jiti@1.21.6)(postcss@8.4.31)(typescript@5.5.4)(yaml@2.5.1)
+      typescript:
+        specifier: ^5.3.3
+        version: 5.5.4
+
+  packages/tokens:
+    devDependencies:
       eslint:
         specifier: ^8.57.0
         version: 8.57.0
@@ -740,6 +758,11 @@ packages:
 
   '@rushstack/eslint-patch@1.2.0':
     resolution: {integrity: sha512-sXo/qW2/pAcmT43VoRKOJbDOfV3cYpq3szSVfIThQXNt+E4DfKj361vaAt3c88U5tPUxzEswam7GW48PJqtKAg==}
+
+  '@stitches/react@1.2.8':
+    resolution: {integrity: sha512-9g9dWI4gsSVe8bNLlb+lMkBYsnIKCZTmvqvDG+Avnn69XfmHZKiaMrx7cgTaddq7aTPPmXiTsbFcUy0xgI4+wA==}
+    peerDependencies:
+      react: '>= 16.3.0'
 
   '@swc/counter@0.1.3':
     resolution: {integrity: sha512-e2BR4lsJkkRlKZ/qCHPw9ZaSxc0MVUd7gtbtaB7aMvHeJVYe8sOB8DBZkP2DtISHGSku9sCK6T6cnY0CtXrOCQ==}
@@ -4023,7 +4046,7 @@ snapshots:
   '@eslint/eslintrc@2.1.4':
     dependencies:
       ajv: 6.12.6
-      debug: 4.3.4
+      debug: 4.3.6
       espree: 9.6.1
       globals: 13.20.0
       ignore: 5.2.4
@@ -4215,6 +4238,10 @@ snapshots:
   '@rushstack/eslint-patch@1.10.4': {}
 
   '@rushstack/eslint-patch@1.2.0': {}
+
+  '@stitches/react@1.2.8(react@18.3.1)':
+    dependencies:
+      react: 18.3.1
 
   '@swc/counter@0.1.3': {}
 

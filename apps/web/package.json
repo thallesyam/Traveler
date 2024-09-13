@@ -8,6 +8,7 @@
     "start": "next start",
     "lint": "next lint"
   },
+  "packageManager": "pnpm@9.1.0",
   "dependencies": {
     "@traveler/louvre": "workspace:*",
     "react": "^18",

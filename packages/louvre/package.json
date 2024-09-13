@@ -3,28 +3,26 @@
   "version": "0.0.0",
   "sideEffects": false,
   "license": "MIT",
-  "exports": {
-    "./button": {
-      "types": "./src/button.tsx",
-      "import": "./dist/button.mjs",
-      "require": "./dist/button.js"
-    }
-  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "packageManager": "pnpm@9.1.0",
   "scripts": {
-    "build": "tsup",
-    "dev": "tsup --watch",
-    "lint": "eslint . --max-warnings 0",
-    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
+    "build": "tsup src/index.tsx --format esm,cjs --dts --external react",
+    "dev": "tsup src/index.tsx --format esm,cjs --dts --external react --watch",
+    "lint": "eslint src/**/*.ts* --fix"
   },
   "devDependencies": {
+    "@traveler/tsconfig": "workspace:*",
+    "@traveler/tokens": "workspace:*",
     "@types/react": "^18.2.61",
     "@types/react-dom": "^18.2.19",
     "eslint": "^8.57.0",
-    "@traveler/tsconfig": "workspace:*",
     "tsup": "^8.0.2",
     "typescript": "^5.3.3"
   },
   "dependencies": {
+    "@stitches/react": "^1.2.8",
     "react": "^18.2.0"
   },
   "publishConfig": {
