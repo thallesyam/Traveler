@@ -3,25 +3,25 @@ import { styled } from '../styles'
 
 export const Button = styled('button', {
   all: 'unset',
-  borderRadius: '$sm',
-  fontSize: '$sm',
+  borderRadius: '$md',
+  fontSize: '$lg',
   fontWeight: '$medium',
   fontFamily: '$default',
   textAlign: 'center',
-  minWidth: 120,
   boxSizing: 'border-box',
-  padding: '0 $4',
+  width: '100%',
+  transition: "all 0.2s",
 
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
-  gap: '$2',
+  gap: '$3',
 
   cursor: 'pointer',
 
   svg: {
-    width: '$4',
-    height: '$4',
+    width: '$5',
+    height: '$5',
   },
 
   '&:disabled': {
@@ -36,59 +36,77 @@ export const Button = styled('button', {
     variant: {
       primary: {
         color: '$white',
-        background: '$ignite500',
+        background: '$orange500',
 
         '&:not(:disabled):hover': {
-          background: '$ignite300',
+          background: '$orange600'
         },
 
         '&:disabled': {
-          backgroundColor: '$gray200',
+          backgroundColor: '$gray400',
         },
       },
 
       secondary: {
-        color: '$ignite300',
-        border: '2px solid $ignite500',
+        color: '$blue500',
+        background: '$blue50',
 
         '&:not(:disabled):hover': {
-          background: '$ignite500',
-          color: '$white',
+          background: '$blue100'
         },
 
         '&:disabled': {
-          color: '$gray200',
-          borderColor: '$gray200',
+          color: '$white',
+          backgroundColor: '$gray400',
         },
       },
 
       tertiary: {
-        color: '$gray100',
+        color: '$white',
+        background: '$blue500',
 
         '&:not(:disabled):hover': {
-          color: '$white',
+          background: '$blue800'
         },
 
         '&:disabled': {
-          color: '$gray600',
+          color: '$white',
+          backgroundColor: '$blue100',
         },
       },
+
+      action: {
+        color: '$white',
+        background: '$green500',
+
+        '&:not(:disabled):hover': {
+          background: '$green600'
+        },
+
+        '&:disabled': {
+          color: '$white',
+          backgroundColor: '$gray400',
+        },
+      }
     },
 
     size: {
       sm: {
-        height: 38,
+        padding: '$2'
       },
-
       md: {
-        height: 46,
+        padding: '$3 $8',
+
       },
-    },
+      lg: {
+        padding: '$6 $14',
+      }
+    }
+
   },
 
   defaultVariants: {
     variant: 'primary',
-    size: 'md',
   },
 })
 

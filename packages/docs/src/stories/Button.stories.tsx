@@ -13,7 +13,7 @@ export default {
   },
   argTypes: {
     variant: {
-      options: ["primary", "secondary", "tertiary"],
+      options: ["primary", "secondary", "tertiary", 'action'],
       control: {
         type: "inline-radio",
       },
@@ -48,6 +48,14 @@ export const Tertiary: StoryObj<ButtonProps> = {
     children: "Cancel",
   },
 };
+
+export const Action: StoryObj<ButtonProps> = {
+  args: {
+    variant: "action",
+    children: "Entrar em contato",
+  },
+};
+
 
 export const Small: StoryObj<ButtonProps> = {
   args: {
